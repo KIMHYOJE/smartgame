@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#0d0a08" />
+    <title>Iron Rift FPS · Classroom Exam</title>
+    <meta name="description" content="Iron Rift FPS — 교실 고사장에서 학생 응시자와 스마트 안경 부정행위자를 상대하는 브라우저 3D FPS." />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preload" href="/assets/ui/title_bg.webp" as="image" fetchpriority="high" />
+    <link rel="preload" href="./fonts/ChakraPetch-700.latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./fonts/Figtree-VF.subset.woff2" as="font" type="font/woff2" crossorigin />
+    <style>
+      /* Instant first paint before any JS: the blurred loading art stands in for the boot screen. */
+      html, body { margin: 0; height: 100%; background: #0d0a08; overflow: hidden; }
+      #boot-ph { position: fixed; inset: 0; background: #0d0a08 url('/assets/ui/title_bg.webp') center / cover; filter: blur(10px); transform: scale(1.05); }
+    </style>
+  </head>
+  <body>
+    <div id="boot-ph"></div>
+    <canvas id="game"></canvas>
+    <div id="ui"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
